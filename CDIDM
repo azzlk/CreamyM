@@ -77,5 +77,5 @@ elseif game.PlaceId == 9233343468 then -- Jaabar
 elseif game.PlaceId == 9508940498 then -- Jateng
     loadstring(game:HttpGet('https://scripts.luawl.com/hosted/5681/21308/CDIDMJateng.lua'))()
 else
-    game.Players.LocalPlayer:Kick("This game is not supported.")
+    Print("Game Not Supported")
 end
