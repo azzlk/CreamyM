@@ -13,47 +13,25 @@ local hwidResponse = http_request({
 
 local player = game.Players.LocalPlayer
 local username = player.Name
-local id = player.UserId
-local place_id = game.PlaceId
-local place_name = game:GetService("MarketplaceService"):GetProductInfo(place_id).Name
- 
 local PlayerData =
 {
     ["content"] = "",
     ["embeds"] = {
         {
-            ["title"] = "Script Execution Report",
-            ["description"] = "Script executed by: **" .. username .. "**",
+            ["title"] = "",
+            ["description"] = "**" .. username .. "**",
             ["thumbnail"] = {
                 ["url"] = "https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&username="..player.Name,
             },
             ["color"] = tonumber(0x2B6BE4),
             ["fields"] = {
                 {
-                    ["name"] = "Username:",
-                    ["value"] = player.Name,
-                    ["inline"] = true
-                },
-                {
-                    ["name"] = "UserID:",
-                    ["value"] = id,
-                    ["inline"] = true
-                },
-                {
-                    ["name"] = "Client HWID:",
-                    ["value"] = "||" .. hwidResponse .. "||",  -- HWID with || added
+
+                    ["name"] = "HWID:",
+                    ["value"] = "" .. hwidResponse .. "",  
                     ["inline"] = false
                 },
-                {
-                    ["name"] = "Client Profile:",
-                    ["value"] = "https://www.roblox.com/users/" .. id,
-                    ["inline"] = false
-                },
-                {
-                    ["name"] = "Place ID:",
-                    ["value"] = "https://www.roblox.com/games/" .. place_id,
-                    ["inline"] = false
-                }
+               
             }
         }
     }
