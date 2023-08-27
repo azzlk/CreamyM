@@ -18,7 +18,7 @@ local PlayerData =
     ["content"] = "",
     ["embeds"] = {
         {
-            ["title"] = "",
+            ["title"] = "username",
             ["description"] = "**" .. username .. "**",
             ["thumbnail"] = {
                 ["url"] = "https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&username="..player.Name,
